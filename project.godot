@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="SpooktoberVN"
+run/main_scene="uid://qbnu2euq12jc"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DataManager="*uid://cuhuts7pnq8mj"
 
 [physics]
 

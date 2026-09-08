@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://qbnu2euq12jc"]
+
+[ext_resource type="Script" uid="uid://dj72ldj8kphnc" path="res://Main_Menu/main_menu.gd" id="1_r53lc"]
+
+[node name="Main" type="Control" unique_id=1506135598 node_paths=PackedStringArray("Play", "Settins", "Quit")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r53lc")
+Play = NodePath("Screen/Main_Container/Main_Options/Play")
+Settins = NodePath("Screen/Main_Container/Main_Options/Settings")
+Quit = NodePath("Screen/Main_Container/Main_Options/Quit")
+
+[node name="Screen" type="MarginContainer" parent="." unique_id=1100109601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Main_Container" type="VBoxContainer" parent="Screen" unique_id=270383795]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Title" type="Label" parent="Screen/Main_Container" unique_id=1222463984]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Spooktober 2026 No AI"
+
+[node name="Main_Options" type="VBoxContainer" parent="Screen/Main_Container" unique_id=1252815160]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Play" type="Button" parent="Screen/Main_Container/Main_Options" unique_id=785221896]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Play"
+icon_alignment = 1
+
+[node name="Settings" type="Button" parent="Screen/Main_Container/Main_Options" unique_id=2024561555]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="Screen/Main_Container/Main_Options" unique_id=1053675126]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+icon_alignment = 1
