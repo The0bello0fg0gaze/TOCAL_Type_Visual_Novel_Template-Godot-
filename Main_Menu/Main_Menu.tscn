@@ -14,6 +14,15 @@ Play = NodePath("Screen/Main_Container/Main_Options/Play")
 Settins = NodePath("Screen/Main_Container/Main_Options/Settings")
 Quit = NodePath("Screen/Main_Container/Main_Options/Quit")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1949916972]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27752772, 0.27752772, 0.27752772, 1)
+
 [node name="Screen" type="MarginContainer" parent="." unique_id=1100109601]
 layout_mode = 1
 anchors_preset = 15

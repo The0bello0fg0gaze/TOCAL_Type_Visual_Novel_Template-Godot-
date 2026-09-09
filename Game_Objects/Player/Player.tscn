@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cf5qg1wlf62gm" path="res://Game_Objects/Player/Base_Human/HumanWalk.png" id="2_1h8ki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhsiu"]
-radius = 32.0
+radius = 15.033297
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jwo4p"]
 atlas = ExtResource("2_1h8ki")
@@ -54,8 +54,8 @@ animations = [{
 "texture": SubResource("AtlasTexture_tw72g")
 }],
 "loop": false,
-"name": &"default",
-"speed": 5.0
+"name": &"dwn",
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -86,3 +86,6 @@ shape = SubResource("CircleShape2D_mhsiu")
 texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_1osqx")
+animation = &"dwn"
+frame = 3
+frame_progress = 1.0

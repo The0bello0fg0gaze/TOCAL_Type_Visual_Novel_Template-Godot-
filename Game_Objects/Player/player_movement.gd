@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED:int = 200
+const SPEED:int = 100
 @export var player_animation:AnimatedSprite2D
 
 var last_axis_x: float = 0.0
@@ -49,4 +49,18 @@ func apply_movement() -> void:
 		direction = Vector2(last_axis_x, 0)
 	elif last_axis_y != 0:
 		direction = Vector2(0, last_axis_y)
+	if direction.x:
+		if direction.x == 1:
+			player_animation.flip_h = false
+			player_animation.play("dwn")
+		else:
+			player_animation.flip_h = true
+			player_animation.play("dwn")
+	elif direction.y:
+		if direction.y == -1:
+			player_animation.play("up")
+		else:
+			player_animation.play("dwn")
+	else:
+		player_animation.stop()
 	velocity = direction * SPEED
