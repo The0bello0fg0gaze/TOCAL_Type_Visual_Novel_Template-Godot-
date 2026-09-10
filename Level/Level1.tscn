@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgc6u25xkn1uo" path="res://Game_Objects/catacomb/mainlevbuild.png" id="1_1rv4e"]
 [ext_resource type="PackedScene" uid="uid://cievaalif527r" path="res://Game_Objects/Player/Player.tscn" id="1_n58pf"]
+[ext_resource type="PackedScene" uid="uid://dmqaxlnubu27l" path="res://Game_Objects/Interactive/template.tscn" id="3_ai77n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ai77n"]
 texture = ExtResource("1_1rv4e")
@@ -1370,3 +1371,6 @@ tile_set = SubResource("TileSet_7lyb7")
 
 [node name="Player" parent="." unique_id=1367513160 instance=ExtResource("1_n58pf")]
 position = Vector2(543, 302)
+
+[node name="Interactive" parent="." unique_id=259210659 instance=ExtResource("3_ai77n")]
+position = Vector2(207, 299)

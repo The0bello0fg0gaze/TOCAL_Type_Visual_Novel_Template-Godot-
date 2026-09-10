@@ -75,7 +75,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1367513160 node_paths=PackedStringArray("player_animation")]
+[node name="Player" type="CharacterBody2D" unique_id=1367513160 node_paths=PackedStringArray("player_animation") groups=["Player"]]
 script = ExtResource("1_4pvco")
 player_animation = NodePath("AnimatedSprite2D")
 

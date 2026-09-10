@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dmqaxlnubu27l"]
+
+[ext_resource type="Script" uid="uid://bhm6vi8xw6s44" path="res://Game_Objects/Interactive/template.gd" id="1_qcu5y"]
+[ext_resource type="Texture2D" uid="uid://c0g113ce8c43x" path="res://Game_Objects/catacomb/CandelsB.png" id="2_5ince"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygpti"]
+size = Vector2(68, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5inxh"]
+atlas = ExtResource("2_5ince")
+region = Rect2(0, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygpti"]
+atlas = ExtResource("2_5ince")
+region = Rect2(13, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcu5y"]
+atlas = ExtResource("2_5ince")
+region = Rect2(0, 16, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13mmj"]
+atlas = ExtResource("2_5ince")
+region = Rect2(13, 16, 13, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mtta4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5inxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygpti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcu5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13mmj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ince"]
+size = Vector2(26, 18)
+
+[node name="Interactive" type="Area2D" unique_id=1306439248]
+script = ExtResource("1_qcu5y")
+
+[node name="InteracArea" type="CollisionShape2D" parent="." unique_id=289209338]
+shape = SubResource("RectangleShape2D_ygpti")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1998594726]
+texture_filter = 1
+position = Vector2(0, -7)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_mtta4")
+autoplay = "default"
+frame = 2
+frame_progress = 0.053159773
+
+[node name="Body" type="StaticBody2D" parent="." unique_id=1593030058]
+
+[node name="BodyCollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=331381806]
+shape = SubResource("RectangleShape2D_5ince")
+debug_color = Color(0, 0.64794004, 0.20556769, 0.41960785)
+
+[node name="Label" type="Label" parent="." unique_id=1138981656]
+visible = false
+offset_left = -3.0
+offset_top = -42.0
+offset_right = 7.0
+offset_bottom = -11.0
+text = "E"
