@@ -11,7 +11,8 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	apply_movement()
+	if DataManager.movement:
+		apply_movement()
 	move_and_slide()
 
 

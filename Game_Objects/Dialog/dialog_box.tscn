@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://gkytlmtojuph"]
+
+[ext_resource type="Script" uid="uid://ccnd8najvof1o" path="res://Game_Objects/Dialog/dialog_box.gd" id="1_o3r5w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrkjr"]
+bg_color = Color(0.16188967, 0.16188872, 0.16376716, 1)
+
+[node name="Dialog_Box" type="Control" unique_id=1925949572 groups=["DialogBox"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o3r5w")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1997295412]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 400
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="bg" type="Panel" parent="MarginContainer" unique_id=1600340161]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hrkjr")
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1756421488]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "This is the text that will be shown to the players this is to fill the world with this test case."
+autowrap_mode = 2
