@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cievaalif527r" path="res://Game_Objects/Player/Player.tscn" id="1_n58pf"]
 [ext_resource type="PackedScene" uid="uid://dmqaxlnubu27l" path="res://Game_Objects/Interactive/template.tscn" id="3_ai77n"]
 [ext_resource type="PackedScene" uid="uid://gkytlmtojuph" path="res://Game_Objects/Dialog/dialog_box.tscn" id="4_7lyb7"]
+[ext_resource type="PackedScene" uid="uid://dyocl2kl8de08" path="res://Main_Menu/UserControl/user_control.tscn" id="5_5gmx1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ai77n"]
 texture = ExtResource("1_1rv4e")
@@ -1376,8 +1377,13 @@ position = Vector2(281, 297)
 [node name="Interactive" parent="." unique_id=259210659 instance=ExtResource("3_ai77n")]
 position = Vector2(207, 299)
 
-[node name="Dialog_Box" parent="." unique_id=1925949572 groups=["DialogBox"] instance=ExtResource("4_7lyb7")]
+[node name="Dialog_Box" parent="." unique_id=1925949572 instance=ExtResource("4_7lyb7")]
 visible = false
 clip_contents = true
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="UserControl" parent="." unique_id=116555151 instance=ExtResource("5_5gmx1")]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0

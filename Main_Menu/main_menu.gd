@@ -11,6 +11,7 @@ func _ready() -> void:
 	Quit.pressed.connect(_on_quit_pressed)
 	
 func _on_play_pressed() -> void:
+	DataManager.reset()
 	get_tree().change_scene_to_file(DataManager.current_level)
 	
 func _on_setting_pressed() -> void:

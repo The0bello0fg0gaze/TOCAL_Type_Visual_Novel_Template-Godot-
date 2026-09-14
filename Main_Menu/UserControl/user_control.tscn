@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dyocl2kl8de08"]
+
+[ext_resource type="Script" uid="uid://b6ec6f3bou0ru" path="res://Main_Menu/UserControl/user_control.gd" id="1_r6ygs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0jfw"]
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 0.57254905)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 10
+
+[node name="UserControl" type="Control" unique_id=116555151]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6ygs")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1665679806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1182527776]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j0jfw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1795352762]
+layout_mode = 2
+theme_override_constants/margin_top = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer" unique_id=252467904]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="Heading" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=343900554]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Paused "
+horizontal_alignment = 1
+
+[node name="Option" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=1263657301]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Option"
+
+[node name="Continue" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=1318340933]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Continue"
+
+[node name="Main Menu" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=1966345]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED:int = 100
 @export var player_animation:AnimatedSprite2D
+@onready var UserControl = $"../UserControl"
 
 var last_axis_x: float = 0.0
 var last_axis_y: float = 0.0
@@ -10,12 +11,20 @@ var last_axis_y: float = 0.0
 func _ready() -> void:
 	pass
 
+# keep this clean so that we can debug easier
 func _process(delta: float) -> void:
 	if DataManager.movement:
 		apply_movement()
 	move_and_slide()
+	apply_actions()
 
-
+func apply_actions() -> void:
+	if Input.is_action_just_pressed("ui_esc"):
+		UserControl.visible = !UserControl.visible
+		DataManager.movement = !DataManager.movement
+		
+# Well this is in the name learn how to read and yes this is ai gen so there are some bugs read the git
+# issues tab.
 func apply_movement() -> void:
 	var left = Input.is_action_pressed("ui_left")
 	var right = Input.is_action_pressed("ui_right")
